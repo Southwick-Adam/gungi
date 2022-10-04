@@ -1,0 +1,89 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scripts/buttons.gd" type="Script" id=1]
+[ext_resource path="res://assets/square.png" type="Texture" id=2]
+[ext_resource path="res://assets/GlacialIndifference-Italic.otf" type="DynamicFontData" id=5]
+
+[sub_resource type="DynamicFont" id=3]
+size = 25
+outline_size = 1
+outline_color = Color( 0.784314, 0.894118, 0.894118, 1 )
+use_mipmaps = true
+use_filter = true
+extra_spacing_char = 4
+font_data = ExtResource( 5 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 60, 30 )
+
+[node name="buttons" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="ready1" type="Label" parent="."]
+modulate = Color( 0.427451, 0.427451, 0.427451, 1 )
+margin_left = -178.0
+margin_top = 500.0
+margin_right = -61.0
+margin_bottom = 558.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_colors/font_color = Color( 0.784314, 0.894118, 0.894118, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "READY"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ready2" type="Label" parent="."]
+modulate = Color( 0.427451, 0.427451, 0.427451, 1 )
+margin_left = 623.0
+margin_top = 493.0
+margin_right = 740.0
+margin_bottom = 551.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_colors/font_color = Color( 0.784314, 0.894118, 0.894118, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "READY"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ready" type="TouchScreenButton" parent="."]
+position = Vector2( -119, 529 )
+shape = SubResource( 1 )
+shape_centered = false
+
+[node name="Sprite" type="Sprite" parent="ready"]
+self_modulate = Color( 0.407843, 0.745098, 0.929412, 1 )
+scale = Vector2( 1.82812, 0.90625 )
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="ready/Sprite"]
+self_modulate = Color( 0.784314, 0.894118, 0.894118, 1 )
+show_behind_parent = true
+position = Vector2( -2.32458e-06, 0 )
+scale = Vector2( 1.05983, 1.1 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="ready"]
+margin_left = -59.0
+margin_top = -29.0
+margin_right = 58.0
+margin_bottom = 29.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_colors/font_color = Color( 0.784314, 0.894118, 0.894118, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "READY"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="ready" to="." method="_on_ready_pressed"]

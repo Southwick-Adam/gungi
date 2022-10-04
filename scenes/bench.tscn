@@ -1,0 +1,423 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://assets/pieces/circle.png" type="Texture" id=1]
+[ext_resource path="res://assets/pieces/samurai.png" type="Texture" id=2]
+[ext_resource path="res://assets/pieces/musket.png" type="Texture" id=3]
+[ext_resource path="res://scripts/bench.gd" type="Script" id=4]
+[ext_resource path="res://assets/pieces/general.png" type="Texture" id=5]
+[ext_resource path="res://assets/pieces/pawn.png" type="Texture" id=6]
+[ext_resource path="res://assets/pieces/L_general.png" type="Texture" id=7]
+[ext_resource path="res://assets/pieces/archer.png" type="Texture" id=8]
+[ext_resource path="res://assets/pieces/fortress.png" type="Texture" id=9]
+[ext_resource path="res://assets/pieces/cannon.png" type="Texture" id=10]
+[ext_resource path="res://assets/pieces/captain.png" type="Texture" id=11]
+[ext_resource path="res://assets/pieces/ring.png" type="Texture" id=12]
+[ext_resource path="res://assets/pieces/M_general.png" type="Texture" id=13]
+[ext_resource path="res://assets/pieces/spy.png" type="Texture" id=14]
+[ext_resource path="res://assets/pieces/knight.png" type="Texture" id=15]
+[ext_resource path="res://assets/GlacialIndifference-Italic.otf" type="DynamicFontData" id=16]
+[ext_resource path="res://assets/square.png" type="Texture" id=17]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 31.0
+
+[sub_resource type="DynamicFont" id=3]
+size = 25
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 16 )
+
+[node name="bench" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="pawn" type="TouchScreenButton" parent="."]
+shape = SubResource( 2 )
+shape_centered = false
+
+[node name="Sprite" type="Sprite" parent="pawn"]
+self_modulate = Color( 0.921569, 0.921569, 0.921569, 1 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+
+[node name="ring" type="Sprite" parent="pawn/Sprite"]
+modulate = Color( 0.211765, 0.211765, 0.211765, 1 )
+texture = ExtResource( 12 )
+
+[node name="icon" type="Sprite" parent="pawn/Sprite/ring"]
+texture = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="pawn"]
+margin_left = 24.0
+margin_top = -18.0
+margin_right = 64.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "6"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="M_general" type="TouchScreenButton" parent="."]
+position = Vector2( 0, 65 )
+shape = SubResource( 2 )
+shape_centered = false
+
+[node name="Sprite" type="Sprite" parent="M_general"]
+self_modulate = Color( 0.921569, 0.921569, 0.921569, 1 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+
+[node name="ring" type="Sprite" parent="M_general/Sprite"]
+modulate = Color( 0.211765, 0.211765, 0.211765, 1 )
+texture = ExtResource( 12 )
+
+[node name="icon" type="Sprite" parent="M_general/Sprite/ring"]
+texture = ExtResource( 13 )
+
+[node name="Label" type="Label" parent="M_general"]
+margin_left = 24.0
+margin_top = -18.0
+margin_right = 64.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "6"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="L_general" type="TouchScreenButton" parent="."]
+position = Vector2( 0, 130 )
+shape = SubResource( 2 )
+shape_centered = false
+
+[node name="Sprite" type="Sprite" parent="L_general"]
+self_modulate = Color( 0.921569, 0.921569, 0.921569, 1 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+
+[node name="ring" type="Sprite" parent="L_general/Sprite"]
+modulate = Color( 0.211765, 0.211765, 0.211765, 1 )
+texture = ExtResource( 12 )
+
+[node name="icon" type="Sprite" parent="L_general/Sprite/ring"]
+texture = ExtResource( 7 )
+
+[node name="Label" type="Label" parent="L_general"]
+margin_left = 24.0
+margin_top = -18.0
+margin_right = 64.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "6"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="general" type="TouchScreenButton" parent="."]
+position = Vector2( 0, 195 )
+shape = SubResource( 2 )
+shape_centered = false
+
+[node name="Sprite" type="Sprite" parent="general"]
+self_modulate = Color( 0.921569, 0.921569, 0.921569, 1 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+
+[node name="ring" type="Sprite" parent="general/Sprite"]
+modulate = Color( 0.211765, 0.211765, 0.211765, 1 )
+texture = ExtResource( 12 )
+
+[node name="icon" type="Sprite" parent="general/Sprite/ring"]
+texture = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="general"]
+margin_left = 24.0
+margin_top = -18.0
+margin_right = 64.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "6"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="archer" type="TouchScreenButton" parent="."]
+position = Vector2( 0, 260 )
+shape = SubResource( 2 )
+shape_centered = false
+
+[node name="Sprite" type="Sprite" parent="archer"]
+self_modulate = Color( 0.921569, 0.921569, 0.921569, 1 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+
+[node name="ring" type="Sprite" parent="archer/Sprite"]
+modulate = Color( 0.211765, 0.211765, 0.211765, 1 )
+texture = ExtResource( 12 )
+
+[node name="icon" type="Sprite" parent="archer/Sprite/ring"]
+texture = ExtResource( 8 )
+
+[node name="Label" type="Label" parent="archer"]
+margin_left = 24.0
+margin_top = -18.0
+margin_right = 64.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "6"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="knight" type="TouchScreenButton" parent="."]
+position = Vector2( 0, 325 )
+shape = SubResource( 2 )
+shape_centered = false
+
+[node name="Sprite" type="Sprite" parent="knight"]
+self_modulate = Color( 0.921569, 0.921569, 0.921569, 1 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+
+[node name="ring" type="Sprite" parent="knight/Sprite"]
+modulate = Color( 0.211765, 0.211765, 0.211765, 1 )
+texture = ExtResource( 12 )
+
+[node name="icon" type="Sprite" parent="knight/Sprite/ring"]
+texture = ExtResource( 15 )
+
+[node name="Label" type="Label" parent="knight"]
+margin_left = 24.0
+margin_top = -18.0
+margin_right = 64.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "6"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="musket" type="TouchScreenButton" parent="."]
+position = Vector2( 100, 0 )
+shape = SubResource( 2 )
+shape_centered = false
+
+[node name="Sprite" type="Sprite" parent="musket"]
+self_modulate = Color( 0.921569, 0.921569, 0.921569, 1 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+
+[node name="ring" type="Sprite" parent="musket/Sprite"]
+modulate = Color( 0.211765, 0.211765, 0.211765, 1 )
+texture = ExtResource( 12 )
+
+[node name="icon" type="Sprite" parent="musket/Sprite/ring"]
+texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="musket"]
+margin_left = 24.0
+margin_top = -18.0
+margin_right = 64.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "6"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="captain" type="TouchScreenButton" parent="."]
+position = Vector2( 100, 65 )
+shape = SubResource( 2 )
+shape_centered = false
+
+[node name="Sprite" type="Sprite" parent="captain"]
+self_modulate = Color( 0.921569, 0.921569, 0.921569, 1 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+
+[node name="ring" type="Sprite" parent="captain/Sprite"]
+modulate = Color( 0.211765, 0.211765, 0.211765, 1 )
+texture = ExtResource( 12 )
+
+[node name="icon" type="Sprite" parent="captain/Sprite/ring"]
+texture = ExtResource( 11 )
+
+[node name="Label" type="Label" parent="captain"]
+margin_left = 24.0
+margin_top = -18.0
+margin_right = 64.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "6"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="samurai" type="TouchScreenButton" parent="."]
+position = Vector2( 100, 130 )
+shape = SubResource( 2 )
+shape_centered = false
+
+[node name="Sprite" type="Sprite" parent="samurai"]
+self_modulate = Color( 0.921569, 0.921569, 0.921569, 1 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+
+[node name="ring" type="Sprite" parent="samurai/Sprite"]
+modulate = Color( 0.211765, 0.211765, 0.211765, 1 )
+texture = ExtResource( 12 )
+
+[node name="icon" type="Sprite" parent="samurai/Sprite/ring"]
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="samurai"]
+margin_left = 24.0
+margin_top = -18.0
+margin_right = 64.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "6"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fortress" type="TouchScreenButton" parent="."]
+position = Vector2( 100, 195 )
+shape = SubResource( 2 )
+shape_centered = false
+
+[node name="Sprite" type="Sprite" parent="fortress"]
+self_modulate = Color( 0.921569, 0.921569, 0.921569, 1 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+
+[node name="ring" type="Sprite" parent="fortress/Sprite"]
+modulate = Color( 0.211765, 0.211765, 0.211765, 1 )
+texture = ExtResource( 12 )
+
+[node name="icon" type="Sprite" parent="fortress/Sprite/ring"]
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="fortress"]
+margin_left = 24.0
+margin_top = -18.0
+margin_right = 64.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "6"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="cannon" type="TouchScreenButton" parent="."]
+position = Vector2( 100, 260 )
+shape = SubResource( 2 )
+shape_centered = false
+
+[node name="Sprite" type="Sprite" parent="cannon"]
+self_modulate = Color( 0.921569, 0.921569, 0.921569, 1 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+
+[node name="ring" type="Sprite" parent="cannon/Sprite"]
+modulate = Color( 0.211765, 0.211765, 0.211765, 1 )
+texture = ExtResource( 12 )
+
+[node name="icon" type="Sprite" parent="cannon/Sprite/ring"]
+texture = ExtResource( 10 )
+
+[node name="Label" type="Label" parent="cannon"]
+margin_left = 24.0
+margin_top = -18.0
+margin_right = 64.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "6"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="spy" type="TouchScreenButton" parent="."]
+position = Vector2( 100, 325 )
+shape = SubResource( 2 )
+shape_centered = false
+
+[node name="Sprite" type="Sprite" parent="spy"]
+self_modulate = Color( 0.921569, 0.921569, 0.921569, 1 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+
+[node name="ring" type="Sprite" parent="spy/Sprite"]
+modulate = Color( 0.211765, 0.211765, 0.211765, 1 )
+texture = ExtResource( 12 )
+
+[node name="icon" type="Sprite" parent="spy/Sprite/ring"]
+texture = ExtResource( 14 )
+
+[node name="Label" type="Label" parent="spy"]
+margin_left = 24.0
+margin_top = -18.0
+margin_right = 64.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "6"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="new_piece" type="Sprite" parent="."]
+visible = false
+self_modulate = Color( 0.921569, 0.921569, 0.921569, 1 )
+position = Vector2( 100, 325 )
+scale = Vector2( 0.25, 0.25 )
+z_index = 8
+texture = ExtResource( 1 )
+
+[node name="ring" type="Sprite" parent="new_piece"]
+modulate = Color( 0.211765, 0.211765, 0.211765, 1 )
+texture = ExtResource( 12 )
+
+[node name="icon" type="Sprite" parent="new_piece/ring"]
+
+[node name="red" type="Sprite" parent="."]
+modulate = Color( 1, 0, 0, 0 )
+position = Vector2( 437, 203 )
+scale = Vector2( 35.7188, 22.4062 )
+z_index = 10
+texture = ExtResource( 17 )
+
+[connection signal="pressed" from="pawn" to="." method="_on_pawn_pressed"]
+[connection signal="pressed" from="M_general" to="." method="_on_M_general_pressed"]
+[connection signal="pressed" from="L_general" to="." method="_on_L_general_pressed"]
+[connection signal="pressed" from="general" to="." method="_on_general_pressed"]
+[connection signal="pressed" from="archer" to="." method="_on_archer_pressed"]
+[connection signal="pressed" from="knight" to="." method="_on_knight_pressed"]
+[connection signal="pressed" from="musket" to="." method="_on_musket_pressed"]
+[connection signal="pressed" from="captain" to="." method="_on_captain_pressed"]
+[connection signal="pressed" from="samurai" to="." method="_on_samurai_pressed"]
+[connection signal="pressed" from="fortress" to="." method="_on_fortress_pressed"]
+[connection signal="pressed" from="cannon" to="." method="_on_cannon_pressed"]
+[connection signal="pressed" from="spy" to="." method="_on_spy_pressed"]
